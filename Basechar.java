@@ -1,5 +1,11 @@
 public class Basechar {
-    private int hp;
+    private int hp; // health points
+    private int ep; // energy points
     
-    public Basechar(
+    private int str;
+    
+    public Basechar(int hp int ep {
+	this.hp
+	this.ep
+    }
 }
