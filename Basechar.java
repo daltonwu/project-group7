@@ -53,9 +53,9 @@ public class Basechar {
     }
     public String getStats() {
         return Integer.toString(this.dex)
-             + this.spd.toString()
-             + this.str.toString()
-             + this.wis.toString();
+             + Integer.toString(this.spd)
+             + Integer.toString(this.str)
+             + Integer.toString(this.wis);
     }
     
     /*
