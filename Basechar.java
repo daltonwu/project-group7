@@ -3,6 +3,7 @@ public class Basechar {
     private String name;
     
     // health and energy
+    // NOTE: hp first is the convention
     private int hp, ep;
     
     // attributes 'n' stuff
@@ -14,8 +15,7 @@ public class Basechar {
     // constructors
     public Basechar(String name, int hp, int ep) {
         setName(name);
-        setHP(hp);
-        setEP(ep);
+        setStatus(hp, ep);
     }
     public Basechar() {
     	hp = 20;
@@ -31,18 +31,8 @@ public class Basechar {
         return this.name;
     }
     
-    public void setHP(int hp) {
-    	this.hp = hp;
-    }
-    public int getHP() {
-    	return hp;
-    }
-    
-    public void setEP(int ep) {
-    	this.ep = ep;
-    }
-    public int getEP() {
-    	return ep;
+    public String getStatus() {
+    	return Integer.toString(this.hp);
     }
     
     public void setStats(int dex, int spd, int str, int wis) {
@@ -52,10 +42,7 @@ public class Basechar {
         this.wis = wis;
     }
     public String getStats() {
-        return Integer.toString(this.dex)
-             + Integer.toString(this.spd)
-             + Integer.toString(this.str)
-             + Integer.toString(this.wis);
+        return "" + this.dex + this.spd + this.str + this.wis;
     }
     
     /*
