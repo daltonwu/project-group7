@@ -45,7 +45,7 @@ public class Basechar {
     	return ep;
     }
     
-    public void setStats(int dex, spd, str, wis) {
+    public void setStats(int dex, int spd, int str, int wis) {
         this.dex = dex;
         this.spd = spd;
         this.str = str;
