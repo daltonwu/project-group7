@@ -6,7 +6,9 @@ public class Basechar {
     private int hp, ep;
     
     // attributes 'n' stuff
-    private int str, wis, spd, dex;
+    // NOTE: alphabetical order is the convention
+    private int dex, spd, str, wis;
+    //private int[] stats = {0, 0, 0, 0};
     
     
     // constructors
@@ -42,4 +44,28 @@ public class Basechar {
     public int getEP() {
     	return ep;
     }
+    
+    public void setStats(int dex, spd, str, wis) {
+        this.dex = dex;
+        this.spd = spd;
+        this.str = str;
+        this.wis = wis;
+    }
+    public String getStats() {
+        return this.dex.toString()
+             + this.spd.toString()
+             + this.str.toString()
+             + this.wis.toString();
+    }
+    
+    /*
+    public void setStats(int[] stats) {
+        for(int i=0; i<this.stats.length; i++) {
+            this.stats[i] = stats[i];
+        }
+    }
+    public int[] getStats() {
+        return stats;
+    }
+    */
 }
