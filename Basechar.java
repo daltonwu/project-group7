@@ -13,15 +13,38 @@ public class Basechar {
     
     
     // constructors
+    // please don't use them
+    public Basechar(String name, int hp, int ep, int dex, int spd, int str, int wis) {
+        setName(name);
+        setStatus(hp, ep);
+        setStats(dex, spd, str, wis);
+    }
+    public Basechar(String name, int dex, int spd, int str, int wis) {
+        setName(name);
+        genericStatus();
+        setStats(dex, spd, str, wis);
+    }
     public Basechar(String name, int hp, int ep) {
         setName(name);
         setStatus(hp, ep);
+        genericStats();
     }
     public Basechar() {
-    	hp = 20;
-    	ep = 0;
+        genericName();
+        genericStatus();
+        genericStats();
     }
     
+    // NOTE: the following are generic, but NOT RANDOM.
+    public void genericName() {
+        setName("Oh God, a Generic Monster!!1!");
+    }
+    public void genericStatus() {
+        setStatus(20, 0);
+    }
+    public void genericStats() {
+        setStats(0, 0, 0, 0);
+    }
     
     // setters and getters
     public void setName(String name) {
@@ -31,6 +54,10 @@ public class Basechar {
         return this.name;
     }
     
+    public void setStatus(int hp, int ep) {
+        this.hp = hp;
+        this.ep = ep;
+    }
     public String getStatus() {
     	return Integer.toString(this.hp);
     }
