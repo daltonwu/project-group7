@@ -52,7 +52,7 @@ public class Basechar {
         this.wis = wis;
     }
     public String getStats() {
-        return this.dex.toString()
+        return Integer.toString(this.dex)
              + this.spd.toString()
              + this.str.toString()
              + this.wis.toString();
