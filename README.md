@@ -7,10 +7,10 @@ Google Doc URL: https://docs.google.com/document/d/1_sW3FeDC0mlOn_8EoHWobMyxfkVe
 
 Project Assignments:
 
-TIFFANY (XIUZHEN) LEI — Ninja.java
+TIFFANY (XIUZHEN) LEI — Basechar.java
 
-PRANAB ISLAM — Driver.java
+PRANAB ISLAM — Cowboy.java
 
-DALTON WU — Basechar.java
+DALTON WU — Driver.java
 
-REMI MOON — Cowboy.java yay
+REMI MOON — Ninja.java
