@@ -47,6 +47,7 @@ public class Basechar {
     }
     
     // setters and getters
+    // NOTE: getters return ints separated by spaces
     public void setName(String name) {
         this.name = name;
     }
@@ -59,7 +60,7 @@ public class Basechar {
         this.ep = ep;
     }
     public String getStatus() {
-    	return Integer.toString(this.hp);
+    	return hp + " " + ep;
     }
     
     public void setStats(int dex, int spd, int str, int wis) {
@@ -69,7 +70,10 @@ public class Basechar {
         this.wis = wis;
     }
     public String getStats() {
-        return "" + this.dex + this.spd + this.str + this.wis;
+        return this.dex + " "
+             + this.spd + " "
+             + this.str + " "
+             + this.wis;
     }
     
     /*
