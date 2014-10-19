@@ -13,23 +13,36 @@ public class Ninja extends Basechar {
     }
 
     public int throwStars(){
+	if (ep >= 5){
 	dmg = 5;
 	stars -= 1;
 	ep -= 5;
 	return dmg;
+	}else {
+	    return -1;
+	}
     }
+    
 
     public int superKick(){
+	if (ep >= 7){
 	dmg = 10;
 	ep -= 7;
 	return dmg;
+	}else{
+	    return -1;
+	}
     }
 
     public int starCombo(){
+	if (ep >= 10){
 	dmg = 15;
 	ep -= 10;
 	stars -= 5;
 	return dmg;
+	}else {
+	    return -1;
+	}
     }
 
 
