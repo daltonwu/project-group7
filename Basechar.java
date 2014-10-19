@@ -60,7 +60,7 @@ public class Basechar {
         this.ep = ep;
     }
     public String getStatus() {
-    	return hp + " " + ep;
+    	return hp + "," + ep;
     }
     
     public void setStats(int dex, int spd, int str, int wis) {
@@ -70,9 +70,9 @@ public class Basechar {
         this.wis = wis;
     }
     public String getStats() {
-        return this.dex + " "
-             + this.spd + " "
-             + this.str + " "
+        return this.dex + ","
+             + this.spd + ","
+             + this.str + ","
              + this.wis;
     }
     
