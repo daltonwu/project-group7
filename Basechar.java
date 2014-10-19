@@ -88,17 +88,21 @@ public class Basechar {
         if(statName.equals("str")) return this.str;
         if(statName.equals("wis")) return this.wis;
     }
+    /*
     public int getStat(String statName) {
         statName = statName.lower();
         switch (statName) {
             case "dex": return this.dex;
                         break;
             case "spd": return this.spd;
-                        break;case "spd": return this.spd;
+                        break;
+            case "str": return this.str;
+                        break;
+            case "wis": return this.wis;
                         break;
         }
     }
-    
+    */
     
     /*
     public void setStats(int[] stats) {
