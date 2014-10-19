@@ -44,7 +44,7 @@ public class Basechar {
         setStatus(20, 0);
     }
     public void genericStats() {
-        setStats(0, 0, 0, 0);
+        setStats(3, 3, 3, 3);
     }
     
     
@@ -84,7 +84,7 @@ public class Basechar {
              + this.wis;
     }
     public int getStat(String statName) {
-        statName = statName.lower();
+        statName = statName.toLowerCase();
         if(statName.equals("dex")) return this.dex;
         if(statName.equals("spd")) return this.spd;
         if(statName.equals("str")) return this.str;
