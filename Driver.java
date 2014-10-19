@@ -9,6 +9,8 @@ public class Driver {
 	
 	Cowboy c;
 	Ninja n;
+	PlayerChar = PlayerChar.toLowerCase();
+	
 	if (PlayerChar.equals("c")){
 	    c = new Cowboy(name);
 	    n = new Ninja();
@@ -17,11 +19,10 @@ public class Driver {
 	    n = new Ninja(name);
 	    c = new Cowboy();
 	}
-	//System.out.println(c.getName());
+	//System.out.println("Your Character's name is: " + c.getName());
 
-	String log = "";
-	int turn = 1;
-	while (turn <= 5 && c.getHP()>0 && n.getHP()>0){
+        String log = "";
+	while (c.getHP()>0 && n.getHP()>0){
 	    log = log + new ContinueEncounter(PlayerChar,c,n,log);
 	}
 
@@ -47,21 +48,29 @@ public class Driver {
     	String s = "";
     	s = AskUser("Attack or Defend?");
     	if (PlayerChar.equals("c")){
-	    if (s.equals("Attack") && c.getEP()>5){
-		c.attack();
-	    }
-	    else if (s.equals("Defend")){
-		c.defend();
-	    }
-	}
+    	    if (s.equals("Attack") && c.getEP()>5){
+		r = AskUser("Shoot, DoubleShoot, or ___?");
+		r = r.toLowerCase();
+    		if (r.equals("shoot")){c.shot();}
+		else if(r.equals("doubleshoot")){c.doubleShot();}
+		else if(r.equals("___")){c.bangBangAttack();}
+    	    }
+    	    else if (s.equals("Defend")){
+    		c.defend();
+    	    }
+    	}
         else{
-	    if (s.equals("Attack") && n.getEP()>5){
-		n.attack();
+    	    if (s.equals("Attack") && n.getEP()>5){
+		r = AskUser("ThrowStars, SuperKick, or StarCombo?");
+		r = r.toLowerCase();
+		if (r.equals("throwstars")){n.throwStars();} 
+		else if(r.equals("superkick")){n.superKick();}
+		else if(r.equals("starcombo")){n.starCombo();}
 	    }
 	    else if (s.equals("Defend")){
-		n.defend();
-	    }
+    		n.defend();
+    	    }
     	}
     }	
-		
+	
 }
