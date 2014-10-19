@@ -62,6 +62,12 @@ public class Basechar {
     public String getStatus() {
     	return hp + "," + ep;
     }
+    public int getHP() {
+        return this.hp;
+    }
+    public int getEP() {
+        return this.ep;
+    }
     
     public void setStats(int dex, int spd, int str, int wis) {
         this.dex = dex;
@@ -75,6 +81,28 @@ public class Basechar {
              + this.str + ","
              + this.wis;
     }
+    public int getStat(String statName) {
+        statName = statName.lower();
+        if(statName.equals("dex")) return this.dex;
+        if(statName.equals("spd")) return this.spd;
+        if(statName.equals("str")) return this.str;
+        if(statName.equals("wis")) return this.wis;
+    }
+    /*
+    public int getStat(String statName) {
+        statName = statName.lower();
+        switch (statName) {
+            case "dex": return this.dex;
+                        break;
+            case "spd": return this.spd;
+                        break;
+            case "str": return this.str;
+                        break;
+            case "wis": return this.wis;
+                        break;
+        }
+    }
+    */
     
     /*
     public void setStats(int[] stats) {
