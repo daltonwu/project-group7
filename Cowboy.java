@@ -15,7 +15,8 @@ public class Cowboy extends Basechar {
     }
 
     public String attack(Basechar other){
-    return name + "attacked that darn ninja vermon";
+	other.
+	return name + "attacked that darn ninja vermon";
     }
 
 
