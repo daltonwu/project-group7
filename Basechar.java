@@ -35,6 +35,7 @@ public class Basechar {
         genericStats();
     }
     
+    
     // NOTE: the following are generic, but NOT RANDOM.
     public void genericName() {
         setName("Oh God, a Generic Monster!!1!");
@@ -43,11 +44,12 @@ public class Basechar {
         setStatus(20, 0);
     }
     public void genericStats() {
-        setStats(0, 0, 0, 0);
+        setStats(3, 3, 3, 3);
     }
     
+    
     // setters and getters
-    // NOTE: getters return ints separated by spaces
+    // NOTE: getters return ints separated by commas
     public void setName(String name) {
         this.name = name;
     }
@@ -82,7 +84,7 @@ public class Basechar {
              + this.wis;
     }
     public int getStat(String statName) {
-        statName = statName.lower();
+        statName = statName.toLowerCase();
         if(statName.equals("dex")) return this.dex;
         if(statName.equals("spd")) return this.spd;
         if(statName.equals("str")) return this.str;
@@ -114,4 +116,19 @@ public class Basechar {
         return stats;
     }
     */
+    
+    
+    // ATTACKS 'N' COOL STUFF LIKE THAT
+    public int verbalAbuse() {
+        // 0 energy required
+        // returns int dmg = str / 3
+        int dmg = str/3;
+        return dmg;
+    }
+    public int whack() {
+        // 2 energy required
+        // returns int dmg = str / 2
+        int dmg = str/2;
+        return dmg;
+    }
 }
