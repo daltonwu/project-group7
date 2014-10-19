@@ -61,6 +61,12 @@ public class Basechar {
         this.hp = hp;
         this.ep = ep;
     }
+    public void addHP(int moreHP) {
+        this.hp += moreHP;
+    }
+    public void addEP(int moreEP) {
+        this.ep += moreEP;
+    }
     public String getStatus() {
     	return hp + "," + ep;
     }
@@ -131,5 +137,19 @@ public class Basechar {
         
         ep -= 2;
         return str/2;
+    }
+    
+    
+    // RECOVER ENERGY or HP or EP
+    public int lickWounds() {
+        // it's an expression, okay?
+        moreHP = str;
+        this.addHP(moreHP);
+        return moreHP;
+    }
+    public int chill() {
+        moreEP = wis;
+        this.addEP(moreEP);
+        return moreEP;
     }
 }
