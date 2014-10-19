@@ -122,13 +122,14 @@ public class Basechar {
     public int verbalAbuse() {
         // 0 energy required
         // returns int dmg = str / 3
-        int dmg = str/3;
-        return dmg;
+        return str/3;
     }
     public int whack() {
         // 2 energy required
         // returns int dmg = str / 2
-        int dmg = str/2;
-        return dmg;
+        if(ep < 0) return 0;
+        
+        ep -= 2;
+        return str/2;
     }
 }
