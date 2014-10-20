@@ -1,5 +1,5 @@
 public class Ninja extends Basechar {
-    public Ninja(String name, int hp, int ep, int dex, int spd, int str, int wis) {
+    public Ninja(String name) {
 	super (name, 20, 30, 30, 30, 30, 10, 10);
     }
 
