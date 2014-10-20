@@ -8,7 +8,7 @@ public class Basechar {
     
     // attributes 'n' stuff
     // NOTE: alphabetical order is the convention
-    private int dex, spd, str, wis;
+    private double dex, spd, str, wis;
     //private int[] stats = {0, 0, 0, 0};
     
     
