@@ -11,6 +11,10 @@ public class Ninja extends Basechar {
     public void setStars(){
 	stars = 10;
     }
+    
+    public void setKatana(){
+    	katana = 1;
+    }
 
     public int throwStars(){
 	if (ep >= 5){
@@ -45,6 +49,15 @@ public class Ninja extends Basechar {
 	}
     }
 
+public int katanaHit(){
+	if (ep >= 1){
+		dmg = 5;
+		ep -= 1;
+		return dmg;
+	}else {
+		return -1;
+	}
+}
 
 
 
