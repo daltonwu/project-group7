@@ -13,7 +13,7 @@ public class Basechar {
     
     
     // constructors
-    // please don't use them
+    // please don't use all of them
     public Basechar(String name, int hp, int ep, int dex, int spd, int str, int wis) {
         setName(name);
         setStatus(hp, ep);
