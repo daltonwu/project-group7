@@ -3,7 +3,7 @@ public class Cowboy extends Basechar {
     private int ammo;
     private int dmg;
 
-    public Cowboy(String name, int hp, int ep, int dex, int spd, int str, int wis){
+    public Cowboy(String name){
     super(name, 20, 25, 15, 15, 40, 25);
     }
     
