@@ -1,3 +1,6 @@
+// all courtesy of your truly,
+//   DW (no, not that DW)
+
 public class Basechar {
     // name of the thing
     private String name;
