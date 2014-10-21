@@ -31,6 +31,10 @@ public class Ninja extends Basechar {
         // presumably necessary at some point in the future??
         return this.katana;
     }
+
+    public String getName(){
+	return super.toString();
+    }
     
     
     // ATTACKS
