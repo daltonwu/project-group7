@@ -88,7 +88,7 @@ public class Driver {
         		if (ep == 0) {
         		    r = AskUser("[1]LickWounds,[2]Chill");
         		    if(r.equals("1")) {
-        		        n.lickWounds()
+        		        n.lickWounds();
         		    }
         		    else {
         		        n.chill();
