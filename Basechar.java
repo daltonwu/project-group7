@@ -8,7 +8,7 @@ public class Basechar {
     
     // attributes 'n' stuff
     // NOTE: alphabetical order is the convention
-    private double dex, spd, str, wis;
+    private int dex, spd, str, wis;
     //private int[] stats = {0, 0, 0, 0};
     
     
@@ -95,6 +95,7 @@ public class Basechar {
         if(statName.equals("spd")) return this.spd;
         if(statName.equals("str")) return this.str;
         if(statName.equals("wis")) return this.wis;
+        else return -1;
     }
     /*
     public int getStat(String statName) {
@@ -143,12 +144,12 @@ public class Basechar {
     // RECOVER ENERGY or HP or EP
     public int lickWounds() {
         // it's an expression, okay?
-        moreHP = str;
+        int moreHP = str;
         this.addHP(moreHP);
         return moreHP;
     }
     public int chill() {
-        moreEP = wis;
+        int moreEP = wis;
         this.addEP(moreEP);
         return moreEP;
     }
