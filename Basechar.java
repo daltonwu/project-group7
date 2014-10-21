@@ -1,4 +1,4 @@
-// all courtesy of your truly,
+// All courtesy of yours truly,
 //   DW (no, not that DW)
 
 public class Basechar {
