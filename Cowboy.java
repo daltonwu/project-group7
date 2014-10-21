@@ -6,9 +6,11 @@ public class Cowboy extends Basechar {
     // constructors
     public Cowboy() {
 	    super();
+	    this.setAmmo();
     }
     public Cowboy(String name) {
         super(name, 20, 25, 15, 15, 40, 25);
+        this.setAmmo();
     }
     
     
@@ -21,8 +23,8 @@ public class Cowboy extends Basechar {
     // ATTACKS
     public int shot() {
     	if(this.getEP() >= 5) {
-        	this.ammo -= 1;
-        	this.addEP(5);
+        	this.addEP(-5);
+            this.ammo -= 1;
         	return 10;
     	}
 	    return -1;
@@ -30,8 +32,8 @@ public class Cowboy extends Basechar {
     
     public int doubleShot() {
     	if(this.getEP() >= 10) {
-        	this.ammo -= 2;
         	this.addEP(-10);
+        	this.ammo -= 2;
         	return 20;
     	}
         return -1;
@@ -39,8 +41,8 @@ public class Cowboy extends Basechar {
     
     public int bangBangAttack() {
     	if (this.getEP() >= 24) {
-        	this.ammo = 0;
         	this.addEP(-24);
+        	this.ammo = 0;
         	return 50;
     	}
         return -1;
