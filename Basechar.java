@@ -61,6 +61,12 @@ public class Basechar {
         this.hp = hp;
         this.ep = ep;
     }
+    public void setHP(int hp) {
+        this.hp = hp;
+    }
+    public void setEP(int ep) {
+        this.ep = ep;
+    }
     public void addHP(int moreHP) {
         this.hp += moreHP;
     }
