@@ -37,13 +37,13 @@ public class Driver {
     	}
     }
     
-    public String AskUser(String mToUser){
+    public String AskUser(String mToUser) {
     	System.out.print(mToUser);
     	String s = sc.nextLine();
     	return s.toLowerCase();
     }
     
-    public String ContinueEncounter(String PlayerChar, Cowboy x, Ninja y){
+    public String ContinueEncounter(String PlayerChar, Cowboy x, Ninja y) {
         String s = AskUser("Attack or Defend?"); // only attack for now
         if (PlayerChar.equals("c")) {
                 if (s.equals("attack")) {
@@ -62,35 +62,50 @@ public class Driver {
             			r = AskUser("[1]Shoot, [2]DoubleShoot, or [3]BangAttack?");
             			if(r.equals("1") && c.getEP()>=5) {
             			    c.shot();
-            			    i=1;
+            			    i = 1;
             			}
-            			else if(r.equals("2") && ep>=10){c.doubleShot(); i=1}
-            			else if(r.equals("3") && ep>=24){c.bangBangAttack(); i=1}
-            			else{i=-1}
-		    }
-		}
+            			else if(r.equals("2") && c.getEP()>=10) {
+            				c.doubleShot();
+            				i = 1;
+            			}
+            			else if(r.equals("3") && c.getEP()>=24) {
+            			    c.bangBangAttack();
+            			    i = 1;
+            			}
+            			else {
+            			    i = -1;
+            			}
+        		    }
+                }
     	    }
     	    // else if (s.equals("Defend")){
     	    // 	c.defend();
     	    // }
     	}
-        else{
-	    int ep = n.getEP();
-    	    if (s.equals("attack")){
-		if (ep == 0){
-		    r = AskUser("[1]LickWounds,[2]Chill");
-		    if (r.equals("1")){n.lickWounds()}
-		    else {n.chill()}
-		else{
-		    int i = 0;
-		    while (i != -1){
-			r = AskUser("[1]ThrowStars, [2]SuperKick, [3]StarCombo, or [4]Katana?");
-			if (r.equals("1")&& ep>=5){n.throwStars(); i=1} 
-			else if(r.equals("2"&& ep>=7)){n.superKick(); i=1}
-			else if(r.equals("3"&& ep>=10){n.starCombo(); i=1}
-			else if(r.equals("4"&& ep>=1)){n.katanaHit(); i=1}
-			else{i=-1;}
-		    }
+        else {
+    	    int ep = n.getEP();
+    	    if(s.equals("attack")) {
+        		if (ep == 0) {
+        		    r = AskUser("[1]LickWounds,[2]Chill");
+        		    if(r.equals("1")) {
+        		        n.lickWounds()
+        		    }
+        		    else {
+        		        n.chill();
+                		    }
+        		else {
+        		    int i = 0;
+        		    while (i != -1) {
+            			r = AskUser("[1]ThrowStars, [2]SuperKick, [3]StarCombo, or [4]Katana?");
+            			if (r.equals("1")&& ep>=5) {
+            			    n.throwStars();
+            			    i=1;
+            			} 
+            			else if(r.equals("2"&& ep>=7)){n.superKick(); i=1}
+            			else if(r.equals("3"&& ep>=10){n.starCombo(); i=1}
+            			else if(r.equals("4"&& ep>=1)){n.katanaHit(); i=1}
+        			else{i=-1;}
+        		    }
 		}  
     	    }
     	    // else if (s.equals("Defend")){
