@@ -55,9 +55,9 @@ public class Driver {
 		    int i = 0;
 		    while (i != -1){	
 			r = AskUser("[1]Shoot, [2]DoubleShoot, or [3]BangAttack?");
-			if (r.equals("1") && ep-5!=0){c.shot(); i=1}
-			else if(r.equals("2") && ep-10!=0){c.doubleShot(); i=1}
-			else if(r.equals("3") && ep-24!=0){c.bangBangAttack(); i=1}
+			if (r.equals("1") && ep>=5){c.shot(); i=1}
+			else if(r.equals("2") && ep>=10){c.doubleShot(); i=1}
+			else if(r.equals("3") && ep>=24){c.bangBangAttack(); i=1}
 			else{i=-1}
 		    }
 		}
@@ -77,10 +77,10 @@ public class Driver {
 		    int i = 0;
 		    while (i != -1){
 			r = AskUser("[1]ThrowStars, [2]SuperKick, [3]StarCombo, or [4]Katana?");
-			if (r.equals("1")&& ep-5!=0){n.throwStars(); i=1} 
-			else if(r.equals("2"&& ep-7!=0)){n.superKick(); i=1}
-			else if(r.equals("3"&& ep-10!=0)){n.starCombo(); i=1}
-			else if(r.equals("4"&& ep-1!=0)){n.katanaHit(); i=1}
+			if (r.equals("1")&& ep>=5){n.throwStars(); i=1} 
+			else if(r.equals("2"&& ep>=7)){n.superKick(); i=1}
+			else if(r.equals("3"&& ep>=10){n.starCombo(); i=1}
+			else if(r.equals("4"&& ep>=1)){n.katanaHit(); i=1}
 			else{i=-1;}
 		    }
 		}  
