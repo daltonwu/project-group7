@@ -73,6 +73,7 @@ public class Driver {
 		    r = AskUser("[1]LickWounds,[2]Chill");
 		    if (r.equals("1")){n.lickWounds();}
 		    else {n.chill();}
+		}
 		else{
 		    int i = 0;
 		    while (i != -1){
@@ -81,14 +82,15 @@ public class Driver {
 			else if(r.equals("2"&& ep-7!=0)){n.superKick(); i=1;}
 			else if(r.equals("3"&& ep-10!=0)){n.starCombo(); i=1;}
 			else if(r.equals("4"&& ep-1!=0)){n.katanaHit(); i=1;}
-			else{i=-1;}
-		    }
-		}  
-    	    }
-    	    // else if (s.equals("Defend")){
-    	    // 	n.defend();
-    	    // }
-    	}
+			    else{i=-1;}
+			}
+		    }  
+		}
+		// else if (s.equals("Defend")){
+		// 	n.defend();
+		// }
+	    }
+	}
     }	
     
     public String ComputerResponse(String PlayerChar, Cowboy x, Ninja y){
