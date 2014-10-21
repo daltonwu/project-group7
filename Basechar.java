@@ -95,6 +95,7 @@ public class Basechar {
         if(statName.equals("spd")) return this.spd;
         if(statName.equals("str")) return this.str;
         if(statName.equals("wis")) return this.wis;
+        else return -1;
     }
     /*
     public int getStat(String statName) {
