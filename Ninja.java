@@ -2,8 +2,10 @@ public class Ninja extends Basechar {
   public Ninja(){
 	super();
     }
+
     public Ninja(String name) {
 	super (name, 20, 30, 30, 30, 10, 10);
+
     }
 
     //im just gunna call the ninja weapon thing stars
@@ -11,12 +13,21 @@ public class Ninja extends Basechar {
    
     private int dmg;
 
+    private int katana;
+
+    private int ep;
+
+
     public void setStars(){
 	stars = 10;
     }
     
     public void setKatana(){
     	katana = 1;
+    }
+
+    public void setEP(){
+	int ep = super.getEP();
     }
 
     public int throwStars(){
@@ -32,9 +43,9 @@ public class Ninja extends Basechar {
     
 
     public int superKick(){
-	if (ep >= 7){
+	if (ep>= 7){
 	dmg = 10;
-	ep -= 7;
+        ep -= 7;
 	return dmg;
 	}else{
 	    return -1;
@@ -52,7 +63,7 @@ public class Ninja extends Basechar {
 	}
     }
 
-public int katanaHit(){
+    public int katanaHit(){
 	if (ep >= 1){
 		dmg = 5;
 		ep -= 1;
