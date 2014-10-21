@@ -19,6 +19,9 @@ public class Cowboy extends Basechar {
         this.ammo = 6;
     }
     
+    public String getName(){
+	return super.toString();
+    }
     
     // ATTACKS
     public int shot() {
