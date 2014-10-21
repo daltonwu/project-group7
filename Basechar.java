@@ -143,12 +143,12 @@ public class Basechar {
     // RECOVER ENERGY or HP or EP
     public int lickWounds() {
         // it's an expression, okay?
-        moreHP = str;
+        int moreHP = str;
         this.addHP(moreHP);
         return moreHP;
     }
     public int chill() {
-        moreEP = wis;
+        int moreEP = wis;
         this.addEP(moreEP);
         return moreEP;
     }
