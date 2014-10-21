@@ -92,8 +92,8 @@ public class Driver {
         		    }
         		    else {
         		        n.chill();
-                		    }
-        		else {
+                    }
+        		    else {
         		    int i = 0;
         		    while (i != -1) {
             			r = AskUser("[1]ThrowStars, [2]SuperKick, [3]StarCombo, or [4]Katana?");
@@ -107,7 +107,7 @@ public class Driver {
         			else{i=-1;}
         		    }
 		}  
-    	    }
+    	        }
     	    // else if (s.equals("Defend")){
     	    // 	n.defend();
     	    // }
