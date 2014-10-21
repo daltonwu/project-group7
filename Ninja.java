@@ -1,6 +1,9 @@
 public class Ninja extends Basechar {
+  public Ninja(){
+	super();
+    }
     public Ninja(String name) {
-	super (name, 20, 30, 30, 30, 30, 10, 10);
+	super (name, 20, 30, 30, 30, 10, 10);
     }
 
     //im just gunna call the ninja weapon thing stars
