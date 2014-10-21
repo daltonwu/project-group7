@@ -1,74 +1,70 @@
 public class Ninja extends Basechar {
-    public Ninja(){
+	// Ninja-specific variables
+	private int stars, katana;
+	
+	
+	// constructors
+    public Ninja() {
         super();
+        setStars();
+        setKatana();
     }
-    
     public Ninja(String name) {
 	    super(name, 20, 30, 30, 30, 10, 10);
+	    setStars()
+	    setKatana();
     }
-
-    //im just gunna call the ninja weapon thing stars
-    private int stars;
-   
-    private int dmg;
-
-    private int katana;
-
-    private int ep;
-
-
+    
+    
+    // setters 'n' getters
     public void setStars() {
-	    stars = 10;
+	    this.stars = 10;
+    }
+    public int getStars() {
+        return this.stars;
     }
     
     public void setKatana() {
     	katana = 1;
     }
-
-    public void setEP() {
-	    int ep = super.getEP();
+    public void getKatana() {
+        // presumably necessary at some point in the future??
+        return this.katana;
     }
     
     
+    // ATTACKS
     public int throwStars() {
-	    if (ep >= 5) {
-	        dmg = 5;
-        	stars -= 1;
-        	ep -= 5;
-        	return dmg;
-	    } else {
-	        return -1;
+	    if(this.getEP() >= 5) {
+        	this.addEP(-5);
+        	this.stars -= 1;
+        	return 5;
 	    }
+	    return -1;
     }
     
     public int superKick() {
-    	if(ep >= 7) {
-    	    dmg = 10;
-            ep -= 7;
-    	    return dmg;
-    	} else {
-    	    return -1;
+    	if(this.getEP() >= 7) {
+            this.addEP(-7);
+    	    return 10;
     	}
+	    return -1;
     }
-
+    
     public int starCombo() {
-    	if(ep >= 10) {
-        	dmg = 15;
-        	ep -= 10;
-        	stars -= 5;
-        	return dmg;
-    	} else {
-    	    return -1;
+    	if(this.getEP() >= 10) {
+        	this.addEP(-10);
+        	this.stars -= 5;
+        	return 15;
     	}
+    	return -1;
     }
 
     public int katanaHit() {
-    	if (ep >= 1) {
-    		dmg = 5;
-    		ep -= 1;
-    		return dmg;
-    	} else {
-    		return -1;
+    	if (this.getEP() >= 1) {
+    		this.addEP(-1);
+    		return 5;
     	}
+    	return -1;
     }
 }
