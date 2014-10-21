@@ -27,7 +27,7 @@ public class Ninja extends Basechar {
     public void setKatana() {
     	katana = 1;
     }
-    public void getKatana() {
+    public int getKatana() {
         // presumably necessary at some point in the future??
         return this.katana;
     }
