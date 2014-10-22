@@ -57,7 +57,7 @@ public class Driver {
 			    User += 1;
 			}
 		    }
-		    System.out.println("\nYour current energy level is "+c.getEP());
+		    System.out.println("\nYour current energy level is "+c.getEP()+"\nYour opponent's health is"+n.getHP());
 		}
 	    }
 	    else{
@@ -83,7 +83,7 @@ public class Driver {
 		    }  
 		    User += 1;
 		}
-		System.out.println("\nYou current energy level is "+n.getEP());
+		System.out.println("\nYou current energy level is "+n.getEP()+"\nYour opponent's health is "+c.getHP());
 	    }
 
 	    /////////////////////////
