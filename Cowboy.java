@@ -9,7 +9,7 @@ public class Cowboy extends Basechar {
 	    this.setAmmo();
     }
     public Cowboy(String name) {
-        super(name, 20, 25, 15, 15, 40, 25);
+        super(name, 100, 25, 15, 15, 40, 25);
         this.setAmmo();
     }
     
@@ -39,7 +39,7 @@ public class Cowboy extends Basechar {
     	if(this.getEP() >= 10) {
         	this.addEP(-10);
         	this.ammo -= 2;
-		int dmg = 20;
+		int dmg = 30;
 		other.addHP(-1*dmg);
         	return dmg;
     	}
