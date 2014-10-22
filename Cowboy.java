@@ -24,29 +24,35 @@ public class Cowboy extends Basechar {
     }
     
     // ATTACKS
-    public int shot() {
+    public int shot(Basechar other) {
     	if(this.getEP() >= 5) {
-        	this.addEP(-5);
+            this.addEP(-5);
             this.ammo -= 1;
-        	return 10;
+	    int dmg = 10
+	    other.addHP(-1*dmg)
+            return dmg;
     	}
 	    return -1;
     }
     
-    public int doubleShot() {
+    public int doubleShot(Basechar other) {
     	if(this.getEP() >= 10) {
         	this.addEP(-10);
         	this.ammo -= 2;
-        	return 20;
+		int dmg = 20;
+		other.addHP(-1*dmg);
+        	return dmg;
     	}
         return -1;
     }
     
-    public int bangBangAttack() {
+    public int bangBangAttack(Basechar other) {
     	if (this.getEP() >= 24) {
         	this.addEP(-24);
         	this.ammo = 0;
-        	return 50;
+		int dmg = 50;
+		other.addHP(-1*dmg);
+        	return dmg;
     	}
         return -1;
     }
