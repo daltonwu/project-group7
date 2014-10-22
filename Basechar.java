@@ -44,7 +44,7 @@ public class Basechar {
         setName("Oh God, a Generic Monster!!1!");
     }
     public void genericStatus() {
-        setStatus(20, 0);
+        setStatus(20, 100);
     }
     public void genericStats() {
         setStats(3, 3, 3, 3);
