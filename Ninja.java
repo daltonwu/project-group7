@@ -39,7 +39,7 @@ public class Ninja extends Basechar {
     // ATTACKS
     public int throwStars(Basechar other) {
 	    if(this.getEP() >= 5) {
-		int dmg = 5;
+		int dmg = 10;
 		this.addEP(-5);
         	this.stars -= 1;
 		other.addHP(-dmg);
@@ -60,7 +60,7 @@ public class Ninja extends Basechar {
     
     public int starCombo(Basechar other) {
     	if(this.getEP() >= 10) {
-	    int dmg = 15;
+	    int dmg = 30;
 	    this.addEP(-10);
 	    this.stars -= 5;
 	    other.addHP(-15);
@@ -71,7 +71,7 @@ public class Ninja extends Basechar {
 
     public int katanaHit(Basechar other) {
     	if (this.getEP() >= 1) {
-	    int dmg = 10;
+	    int dmg = 15;
 	    this.addEP(-1);
 	    other.addHP(-10);
 	    return 5;
