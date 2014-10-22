@@ -10,7 +10,7 @@ public class Ninja extends Basechar {
         setKatana();
     }
     public Ninja(String name) {
-	    super(name, 20, 30, 30, 30, 10, 10);
+	    super(name, 90, 30, 30, 30, 10, 10);
 	    setStars();
 	    setKatana();
     }
@@ -39,7 +39,7 @@ public class Ninja extends Basechar {
     // ATTACKS
     public int throwStars(Basechar other) {
 	    if(this.getEP() >= 5) {
-		int dmg = 10;
+		int dmg = 18;
 		this.addEP(-5);
         	this.stars -= 1;
 		other.addHP(-dmg);
@@ -50,7 +50,7 @@ public class Ninja extends Basechar {
     
     public int superKick(Basechar other) {
     	if(this.getEP() >= 7) {
-	    int dmg = 20;
+	    int dmg = 40;
             this.addEP(-7);
 	    other.addHP(-dmg);
     	    return 10;
@@ -60,7 +60,7 @@ public class Ninja extends Basechar {
     
     public int starCombo(Basechar other) {
     	if(this.getEP() >= 10) {
-	    int dmg = 25;
+	    int dmg = 45;
 	    this.addEP(-10);
 	    this.stars -= 5;
 	    other.addHP(-15);
@@ -71,7 +71,7 @@ public class Ninja extends Basechar {
 
     public int katanaHit(Basechar other) {
     	if (this.getEP() >= 1) {
-	    int dmg = 15;
+	    int dmg = 50;
 	    this.addEP(-1);
 	    other.addHP(-10);
 	    return 5;
