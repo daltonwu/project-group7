@@ -10,7 +10,7 @@ public class Ninja extends Basechar {
         setKatana();
     }
     public Ninja(String name) {
-	    super(name, 90, 30, 30, 30, 10, 10);
+	    super(name, 90, 70, 30, 30, 10, 10);
 	    setStars();
 	    setKatana();
     }
