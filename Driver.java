@@ -90,7 +90,7 @@ public class Driver {
 	    /// COMPUTER RESPONSE ///
 	    /////////////////////////
 
-	    if (!GameOver.equals("y")){
+	    if (!GameOver.equals("y")&& c.getHP()>0 && n.getHP()>0){
 		if (PlayerChar.equals("c")){
 		    Random r = new Random();
 		    int d = r.nextInt(4);
@@ -129,12 +129,12 @@ public class Driver {
 
 	//Result
 
-	if ((n.getHP() == 0 && PlayerChar.equals("c"))||
-	    (c.getHP() == 0 && PlayerChar.equals("n"))){
+	if ((n.getHP() <= 0 && PlayerChar.equals("c"))||
+	    (c.getHP() <= 0 && PlayerChar.equals("n"))){
 	    System.out.println("\n***Congratulations! You've won!***");
 	}
-	else if ((n.getHP() == 0 && PlayerChar.equals("n"))||
-		 (c.getHP() == 0 && PlayerChar.equals("c"))){
+	else if ((n.getHP() <= 0 && PlayerChar.equals("n"))||
+		 (c.getHP() <= 0 && PlayerChar.equals("c"))){
 	    System.out.println("\nSorry, you've lost");
 	}
     }
