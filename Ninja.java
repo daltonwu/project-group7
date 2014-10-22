@@ -60,7 +60,7 @@ public class Ninja extends Basechar {
     
     public int starCombo(Basechar other) {
     	if(this.getEP() >= 10) {
-	    int dmg = 30;
+	    int dmg = 25;
 	    this.addEP(-10);
 	    this.stars -= 5;
 	    other.addHP(-15);
