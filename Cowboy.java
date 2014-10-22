@@ -28,8 +28,8 @@ public class Cowboy extends Basechar {
     	if(this.getEP() >= 5) {
             this.addEP(-5);
             this.ammo -= 1;
-	    int dmg = 10
-	    other.addHP(-1*dmg)
+	    int dmg = 10;
+	    other.addHP(-1*dmg);
             return dmg;
     	}
 	    return -1;
