@@ -40,7 +40,7 @@ public class Driver {
 	    else if (PlayerChar.equals("c")){
 		int ep = c.getEP();
 		while (s.equals("y")&&User==Comp){
-		    if (ep == 0){
+		    if (ep <= 5){
 			String r = new Driver().AskUser("\nSorry, you need to build up your energy first. [1]LickWounds,[2]Chill: ");
 			if (r.equals("1")){c.lickWounds();}
 			else {c.chill();}
